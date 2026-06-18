@@ -1,10 +1,12 @@
-const CACHE_NAME = 'plmeco-inventario-v1';
+const CACHE_NAME = 'plmeco-inventario-v2-20260618';
 const CORE_ASSETS = [
-  './', './index.html', './styles.css', './app.js', './manifest.json',
-  './icons/icon-192.png', './icons/icon-512.png',
-  'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'
+  './',
+  './index.html',
+  './styles.css?v=20260618-2',
+  './app.js?v=20260618-2',
+  './manifest.json',
+  './icons/icon-192.png',
+  './icons/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
