@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <title>PLMECO - Inventario de Vehículos de Manutención</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="icons/icon-192.png" alt="PLMECO" />
+        <div>
+          <strong>PLMECO</strong>
+          <span>Inventario VM</span>
+        </div>
+      </div>
+      <nav class="menu" id="menu">
+        <button data-view="inicio" class="active">🏠 Inicio</button>
+        <button data-view="inventario">✅ Inventario</button>
+        <button data-view="toyota">🚜 Vehículos Toyota</button>
+        <button data-view="aranco">🏭 Maquinaria Aranco</button>
+        <button data-view="cargadores">🔌 Cargadores</button>
+        <button data-view="historico">📚 Histórico</button>
+        <button data-view="informes">📄 Informes</button>
+        <button data-view="configuracion">⚙️ Configuración</button>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="themeToggle" class="ghost-btn">🌙 Modo oscuro</button>
+        <small>Offline · GitHub Pages · PWA</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="pageTitle">Inicio</h1>
+          <p id="pageSubtitle">Control semanal de vehículos, maquinaria y cargadores.</p>
+        </div>
+        <div class="top-actions">
+          <button id="installBtn" class="secondary hidden">Instalar app</button>
+          <button id="newInventoryBtn" class="primary">Nuevo inventario</button>
+        </div>
+      </header>
+
+      <section id="alertsBar" class="alerts-bar"></section>
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+
+  <dialog id="itemDialog" class="dialog">
+    <form method="dialog" id="itemForm">
+      <h2 id="dialogTitle">Equipo</h2>
+      <div id="dialogFields" class="form-grid"></div>
+      <div class="dialog-actions">
+        <button value="cancel" class="secondary">Cancelar</button>
+        <button id="saveItemBtn" value="default" class="primary">Guardar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
